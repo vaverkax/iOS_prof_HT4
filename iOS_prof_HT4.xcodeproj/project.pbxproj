@@ -11,6 +11,7 @@
 		189079F727EA146900FEDF46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189079F627EA146900FEDF46 /* ContentView.swift */; };
 		189079F927EA146B00FEDF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189079F827EA146B00FEDF46 /* Assets.xcassets */; };
 		189079FC27EA146B00FEDF46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189079FB27EA146B00FEDF46 /* Preview Assets.xcassets */; };
+		18907A0627EA164600FEDF46 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = 18907A0527EA164600FEDF46 /* generate.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		189079F627EA146900FEDF46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		189079F827EA146B00FEDF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189079FB27EA146B00FEDF46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18907A0227EA14D200FEDF46 /* beerApi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = beerApi.yaml; sourceTree = "<group>"; };
+		18907A0427EA160E00FEDF46 /* BeerApiNetworkModule */ = {isa = PBXFileReference; lastKnownFileType = text; name = BeerApiNetworkModule; path = Modules/BeerApiNetworkModule; sourceTree = SOURCE_ROOT; };
+		18907A0527EA164600FEDF46 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,13 @@
 		189079F327EA146900FEDF46 /* iOS_prof_HT4 */ = {
 			isa = PBXGroup;
 			children = (
+				18907A0427EA160E00FEDF46 /* BeerApiNetworkModule */,
 				189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */,
 				189079F627EA146900FEDF46 /* ContentView.swift */,
 				189079F827EA146B00FEDF46 /* Assets.xcassets */,
 				189079FA27EA146B00FEDF46 /* Preview Content */,
+				18907A0227EA14D200FEDF46 /* beerApi.yaml */,
+				18907A0527EA164600FEDF46 /* generate.sh */,
 			);
 			path = iOS_prof_HT4;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 			files = (
 				189079FC27EA146B00FEDF46 /* Preview Assets.xcassets in Resources */,
 				189079F927EA146B00FEDF46 /* Assets.xcassets in Resources */,
+				18907A0627EA164600FEDF46 /* generate.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
