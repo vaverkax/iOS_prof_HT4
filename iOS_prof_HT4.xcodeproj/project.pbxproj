@@ -11,7 +11,33 @@
 		189079F727EA146900FEDF46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189079F627EA146900FEDF46 /* ContentView.swift */; };
 		189079F927EA146B00FEDF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189079F827EA146B00FEDF46 /* Assets.xcassets */; };
 		189079FC27EA146B00FEDF46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189079FB27EA146B00FEDF46 /* Preview Assets.xcassets */; };
-		18907A0627EA164600FEDF46 /* generate.sh in Resources */ = {isa = PBXBuildFile; fileRef = 18907A0527EA164600FEDF46 /* generate.sh */; };
+		18907A0E27EA1CFD00FEDF46 /* BeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18907A0D27EA1CFD00FEDF46 /* BeerViewModel.swift */; };
+		18907A1127EA231600FEDF46 /* Beer+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18907A1027EA231600FEDF46 /* Beer+Identifiable.swift */; };
+		18907A1327EA23A900FEDF46 /* Collection+LastElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18907A1227EA23A900FEDF46 /* Collection+LastElement.swift */; };
+		18C67E1327EDE0E300CA4A6B /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E1227EDE0E300CA4A6B /* Screen.swift */; };
+		18C67E1527EDE0F800CA4A6B /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E1427EDE0F800CA4A6B /* NavigationStack.swift */; };
+		18C67E1827F3293300CA4A6B /* Location+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E1727F3293300CA4A6B /* Location+Identifiable.swift */; };
+		18C67E1A27F3294200CA4A6B /* Forecast+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E1927F3294200CA4A6B /* Forecast+Identifiable.swift */; };
+		18C67E1E27F43FC200CA4A6B /* NetworkingModule in Frameworks */ = {isa = PBXBuildFile; productRef = 18C67E1D27F43FC200CA4A6B /* NetworkingModule */; };
+		18C67E2027F4401F00CA4A6B /* BeerAPI+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E1F27F4401F00CA4A6B /* BeerAPI+Future.swift */; };
+		18C67E2227F4841700CA4A6B /* NavigationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2127F4841700CA4A6B /* NavigationContainerView.swift */; };
+		18C67E2427F4846700CA4A6B /* NavigationControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2327F4846700CA4A6B /* NavigationControllerViewModel.swift */; };
+		18C67E2627F4848800CA4A6B /* Transittion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2527F4848800CA4A6B /* Transittion.swift */; };
+		18C67E2827F484A000CA4A6B /* NavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2727F484A000CA4A6B /* NavigationType.swift */; };
+		18C67E2A27F4860D00CA4A6B /* DetailBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2927F4860D00CA4A6B /* DetailBeerView.swift */; };
+		18C67E2C27F486B500CA4A6B /* View+AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2B27F486B500CA4A6B /* View+AnyView.swift */; };
+		18C67E2E27F4889100CA4A6B /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E2D27F4889100CA4A6B /* BeerListView.swift */; };
+		18C67E3127F4ABE100CA4A6B /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3027F4ABE100CA4A6B /* LoaderView.swift */; };
+		18C67E3327F4AE0800CA4A6B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3227F4AE0800CA4A6B /* MainTabView.swift */; };
+		18C67E3527F4B08300CA4A6B /* TabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3427F4B08300CA4A6B /* TabRouter.swift */; };
+		18C67E3727F4B2C100CA4A6B /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */; };
+		18C67E3D27F4CDD200CA4A6B /* WeatherTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3C27F4CDD200CA4A6B /* WeatherTabView.swift */; };
+		18C67E3F27F4D8FE00CA4A6B /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E3E27F4D8FE00CA4A6B /* WeatherViewModel.swift */; };
+		18C67E4127F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4027F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift */; };
+		18C67E4327F4EB9E00CA4A6B /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */; };
+		18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */; };
+		18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4627F4EF3100CA4A6B /* MapView.swift */; };
+		18C67E4927F4F51B00CA4A6B /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,9 +46,35 @@
 		189079F627EA146900FEDF46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		189079F827EA146B00FEDF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189079FB27EA146B00FEDF46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		18907A0227EA14D200FEDF46 /* beerApi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = beerApi.yaml; sourceTree = "<group>"; };
-		18907A0427EA160E00FEDF46 /* BeerApiNetworkModule */ = {isa = PBXFileReference; lastKnownFileType = text; name = BeerApiNetworkModule; path = Modules/BeerApiNetworkModule; sourceTree = SOURCE_ROOT; };
-		18907A0527EA164600FEDF46 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
+		18907A0A27EA188E00FEDF46 /* networkingSpec.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = networkingSpec.yaml; sourceTree = "<group>"; };
+		18907A0B27EA188E00FEDF46 /* generate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate.sh; sourceTree = "<group>"; };
+		18907A0D27EA1CFD00FEDF46 /* BeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewModel.swift; sourceTree = "<group>"; };
+		18907A1027EA231600FEDF46 /* Beer+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Beer+Identifiable.swift"; sourceTree = "<group>"; };
+		18907A1227EA23A900FEDF46 /* Collection+LastElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+LastElement.swift"; sourceTree = "<group>"; };
+		18C67E1227EDE0E300CA4A6B /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		18C67E1427EDE0F800CA4A6B /* NavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStack.swift; sourceTree = "<group>"; };
+		18C67E1627F3244F00CA4A6B /* NetworkingModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkingModule; path = Modules/NetworkingModule; sourceTree = "<group>"; };
+		18C67E1727F3293300CA4A6B /* Location+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+Identifiable.swift"; sourceTree = "<group>"; };
+		18C67E1927F3294200CA4A6B /* Forecast+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Forecast+Identifiable.swift"; sourceTree = "<group>"; };
+		18C67E1F27F4401F00CA4A6B /* BeerAPI+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerAPI+Future.swift"; sourceTree = "<group>"; };
+		18C67E2127F4841700CA4A6B /* NavigationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationContainerView.swift; sourceTree = "<group>"; };
+		18C67E2327F4846700CA4A6B /* NavigationControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerViewModel.swift; sourceTree = "<group>"; };
+		18C67E2527F4848800CA4A6B /* Transittion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transittion.swift; sourceTree = "<group>"; };
+		18C67E2727F484A000CA4A6B /* NavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationType.swift; sourceTree = "<group>"; };
+		18C67E2927F4860D00CA4A6B /* DetailBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerView.swift; sourceTree = "<group>"; };
+		18C67E2B27F486B500CA4A6B /* View+AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+AnyView.swift"; sourceTree = "<group>"; };
+		18C67E2D27F4889100CA4A6B /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
+		18C67E3027F4ABE100CA4A6B /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		18C67E3227F4AE0800CA4A6B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		18C67E3427F4B08300CA4A6B /* TabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouter.swift; sourceTree = "<group>"; };
+		18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
+		18C67E3C27F4CDD200CA4A6B /* WeatherTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTabView.swift; sourceTree = "<group>"; };
+		18C67E3E27F4D8FE00CA4A6B /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		18C67E4027F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetaWeatherAPI+Future.swift"; sourceTree = "<group>"; };
+		18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
+		18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToCoordinates.swift"; sourceTree = "<group>"; };
+		18C67E4627F4EF3100CA4A6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C67E1E27F43FC200CA4A6B /* NetworkingModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,8 +92,12 @@
 		189079E827EA146900FEDF46 = {
 			isa = PBXGroup;
 			children = (
+				18C67E1627F3244F00CA4A6B /* NetworkingModule */,
+				18907A0A27EA188E00FEDF46 /* networkingSpec.yaml */,
+				18907A0B27EA188E00FEDF46 /* generate.sh */,
 				189079F327EA146900FEDF46 /* iOS_prof_HT4 */,
 				189079F227EA146900FEDF46 /* Products */,
+				18907A0727EA180500FEDF46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +112,15 @@
 		189079F327EA146900FEDF46 /* iOS_prof_HT4 */ = {
 			isa = PBXGroup;
 			children = (
-				18907A0427EA160E00FEDF46 /* BeerApiNetworkModule */,
+				18C67E2F27F494D700CA4A6B /* View */,
+				18C67E1127EDDD5B00CA4A6B /* NavigationStack */,
+				18907A0F27EA230200FEDF46 /* Extensions */,
+				18907A0C27EA1CED00FEDF46 /* ViewModel */,
 				189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */,
-				189079F627EA146900FEDF46 /* ContentView.swift */,
+				18C67E3427F4B08300CA4A6B /* TabRouter.swift */,
+				18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */,
 				189079F827EA146B00FEDF46 /* Assets.xcassets */,
 				189079FA27EA146B00FEDF46 /* Preview Content */,
-				18907A0227EA14D200FEDF46 /* beerApi.yaml */,
-				18907A0527EA164600FEDF46 /* generate.sh */,
 			);
 			path = iOS_prof_HT4;
 			sourceTree = "<group>";
@@ -72,6 +131,66 @@
 				189079FB27EA146B00FEDF46 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18907A0727EA180500FEDF46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18907A0C27EA1CED00FEDF46 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18907A0D27EA1CFD00FEDF46 /* BeerViewModel.swift */,
+				18C67E3E27F4D8FE00CA4A6B /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18907A0F27EA230200FEDF46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18C67E1F27F4401F00CA4A6B /* BeerAPI+Future.swift */,
+				18C67E4027F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift */,
+				18907A1027EA231600FEDF46 /* Beer+Identifiable.swift */,
+				18C67E1727F3293300CA4A6B /* Location+Identifiable.swift */,
+				18C67E1927F3294200CA4A6B /* Forecast+Identifiable.swift */,
+				18907A1227EA23A900FEDF46 /* Collection+LastElement.swift */,
+				18C67E2B27F486B500CA4A6B /* View+AnyView.swift */,
+				18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18C67E1127EDDD5B00CA4A6B /* NavigationStack */ = {
+			isa = PBXGroup;
+			children = (
+				18C67E1227EDE0E300CA4A6B /* Screen.swift */,
+				18C67E2527F4848800CA4A6B /* Transittion.swift */,
+				18C67E2727F484A000CA4A6B /* NavigationType.swift */,
+				18C67E1427EDE0F800CA4A6B /* NavigationStack.swift */,
+				18C67E2327F4846700CA4A6B /* NavigationControllerViewModel.swift */,
+			);
+			path = NavigationStack;
+			sourceTree = "<group>";
+		};
+		18C67E2F27F494D700CA4A6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				189079F627EA146900FEDF46 /* ContentView.swift */,
+				18C67E2D27F4889100CA4A6B /* BeerListView.swift */,
+				18C67E2927F4860D00CA4A6B /* DetailBeerView.swift */,
+				18C67E3027F4ABE100CA4A6B /* LoaderView.swift */,
+				18C67E3227F4AE0800CA4A6B /* MainTabView.swift */,
+				18C67E2127F4841700CA4A6B /* NavigationContainerView.swift */,
+				18C67E3C27F4CDD200CA4A6B /* WeatherTabView.swift */,
+				18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */,
+				18C67E4627F4EF3100CA4A6B /* MapView.swift */,
+				18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +209,9 @@
 			dependencies = (
 			);
 			name = iOS_prof_HT4;
+			packageProductDependencies = (
+				18C67E1D27F43FC200CA4A6B /* NetworkingModule */,
+			);
 			productName = iOS_prof_HT4;
 			productReference = 189079F127EA146900FEDF46 /* iOS_prof_HT4.app */;
 			productType = "com.apple.product-type.application";
@@ -134,7 +256,6 @@
 			files = (
 				189079FC27EA146B00FEDF46 /* Preview Assets.xcassets in Resources */,
 				189079F927EA146B00FEDF46 /* Assets.xcassets in Resources */,
-				18907A0627EA164600FEDF46 /* generate.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +266,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C67E1527EDE0F800CA4A6B /* NavigationStack.swift in Sources */,
+				18C67E3727F4B2C100CA4A6B /* ConfigManager.swift in Sources */,
+				18C67E4927F4F51B00CA4A6B /* FullScreenMapView.swift in Sources */,
+				18C67E3D27F4CDD200CA4A6B /* WeatherTabView.swift in Sources */,
+				18907A0E27EA1CFD00FEDF46 /* BeerViewModel.swift in Sources */,
+				18C67E2427F4846700CA4A6B /* NavigationControllerViewModel.swift in Sources */,
+				18C67E2027F4401F00CA4A6B /* BeerAPI+Future.swift in Sources */,
+				18C67E3527F4B08300CA4A6B /* TabRouter.swift in Sources */,
+				18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */,
+				18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */,
+				18C67E2827F484A000CA4A6B /* NavigationType.swift in Sources */,
+				18C67E2E27F4889100CA4A6B /* BeerListView.swift in Sources */,
+				18C67E3127F4ABE100CA4A6B /* LoaderView.swift in Sources */,
+				18C67E1827F3293300CA4A6B /* Location+Identifiable.swift in Sources */,
+				18C67E4327F4EB9E00CA4A6B /* DailyForecastView.swift in Sources */,
+				18C67E2227F4841700CA4A6B /* NavigationContainerView.swift in Sources */,
+				18C67E2627F4848800CA4A6B /* Transittion.swift in Sources */,
 				189079F727EA146900FEDF46 /* ContentView.swift in Sources */,
 				189079F527EA146900FEDF46 /* iOS_prof_HT4App.swift in Sources */,
+				18C67E2A27F4860D00CA4A6B /* DetailBeerView.swift in Sources */,
+				18907A1127EA231600FEDF46 /* Beer+Identifiable.swift in Sources */,
+				18C67E2C27F486B500CA4A6B /* View+AnyView.swift in Sources */,
+				18C67E1A27F3294200CA4A6B /* Forecast+Identifiable.swift in Sources */,
+				18907A1327EA23A900FEDF46 /* Collection+LastElement.swift in Sources */,
+				18C67E3F27F4D8FE00CA4A6B /* WeatherViewModel.swift in Sources */,
+				18C67E4127F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift in Sources */,
+				18C67E1327EDE0E300CA4A6B /* Screen.swift in Sources */,
+				18C67E3327F4AE0800CA4A6B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +496,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18C67E1D27F43FC200CA4A6B /* NetworkingModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 189079E927EA146900FEDF46 /* Project object */;
 }
