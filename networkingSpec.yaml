@@ -1,0 +1,487 @@
+openapi: 3.0.1
+info:
+  title: Networking Test
+  description: Test specification of two public APIs
+  version: 1.0.0
+servers:
+  - url: https://api.punkapi.com/v2
+tags:
+- name: beer
+  description: Beers list
+- name: MetaWeather
+  description: Weather forecast
+paths:
+  /location/{woeid}/:
+    servers:
+        - url: https://www.metaweather.com/api
+    get:
+      tags:
+        - MetaWeather
+      summary: Location information, and a 5 day forecast
+      parameters:
+      - in: path
+        name: woeid
+        schema:
+          type: integer
+        required: true
+        example: 44418
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Forecast'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorWeather'
+  /location/search:
+    servers:
+        - url: https://www.metaweather.com/api
+    get:
+      tags:
+        - MetaWeather
+      summary: Find a location
+      parameters:
+      - in: query
+        name: query
+        description: Full or short name of a city
+        schema:
+          type: string
+        example:
+          query: san
+      - name: lattlong
+        in: query
+        schema:
+          type: array
+          items:
+            type: number
+          maxItems: 2
+        example:
+          lattlong: 36.96,-122.02
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LocationArray'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorWeather'
+  /beers:
+    servers:
+      - url: https://api.punkapi.com
+    get:
+      tags:
+      - beer
+      description: Auto generated using Swagger Inspector
+      parameters:
+      - name: abv_gt
+        in: query
+        description: Returns all beers with ABV greater than the supplied number
+        required: false
+        schema:
+          type: integer
+      - name: abv_lt
+        in: query
+        description: Returns all beers with ABV less than the supplied number
+        required: false
+        schema:
+          type: integer
+      - name: ibu_gt
+        in: query
+        description: Returns all beers with IBU greater than the supplied number
+        required: false
+        schema:
+          type: integer
+      - name: ibu_lt
+        in: query
+        description: Returns all beers with IBU less than the supplied number
+        required: false
+        schema:
+          type: integer
+      - name: beer_name
+        in: query
+        description: Returns all beers matching the supplied name (this will match partial strings as well so e.g punk will return Punk IPA), if you need to add spaces just add an underscore (_).
+        required: false
+        schema:
+          type: string
+      - name: page
+        in: query
+        description: Number of page
+        schema:
+          type: integer
+      - name: per_page
+        in: query
+        description: Per page
+        schema:
+          type: integer
+      - name: brewed_before
+        in: query
+        description: Returns all beers brewed before this date, the date format is mm-yyyy e.g 10-2011
+        schema:
+          type: string
+          example: 11-2012
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BeerList'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBeer'
+  /beers/random:
+    servers:
+      - url: https://api.punkapi.com
+    get:
+      tags:
+      - beer
+      description: Get random beer
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Beer'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBeer'
+  /beers/{beerId}:
+    servers:
+      - url: https://api.punkapi.com
+    get:
+      tags:
+      - beer
+      description: Get single beer
+      parameters:
+      - in: path
+        name: beerId
+        schema:
+          type: integer
+        required: true
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Beer'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorBeer'
+components:
+  schemas:
+    ErrorBeer:
+      required:
+        - statusCode
+        - error
+        - message
+      properties:
+        statusCode:
+          type: number
+        error:
+          type: string
+        message:
+          type: string
+        data:
+          type: array
+          items:
+            type: object
+            properties:
+              location:
+                type: string
+              param:
+                type: string
+              msg:
+                type: string
+              value:
+                type: string
+    BeerList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Beer'
+    Beer:
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        tagline:
+          type: string
+          nullable: true
+        first_brewed:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        image_url:
+          type: string
+          nullable: true
+        abv:
+          type: number
+          nullable: true
+        target_fg:
+          type: number
+          nullable: true
+        target_og:
+          type: number
+          nullable: true
+        ph:
+          type: number
+          nullable: true
+        attenuation_level:
+          type: number
+          nullable: true
+        volume:
+          properties:
+            value:
+              type: number
+              nullable: true
+            unit:
+              type: string
+              nullable: true
+          type: object
+          nullable: true
+        boil_volume:
+          properties:
+            value:
+              type: number
+              nullable: true
+            unit:
+              type: string
+              nullable: true
+          type: object
+          nullable: true
+        method:
+          properties:
+            mash_temp:
+              type: array
+              nullable: true
+              items:
+                type: object
+                nullable: true
+                properties:
+                  temp:
+                    properties:
+                      value:
+                        type: number
+                        nullable: true
+                      unit:
+                        type: string
+                        nullable: true
+                    type: object
+                    nullable: true
+                  duration:
+                    type: number
+                    nullable: true
+            fermentation:
+              properties:
+                temp:
+                  properties:
+                    value:
+                      type: number
+                      nullable: true
+                    unit:
+                      type: string
+                      nullable: true
+                  type: object
+                  nullable: true
+              type: object
+              nullable: true
+            twist:
+              type: string
+              nullable: true
+          type: object
+          nullable: true
+        ingredients:
+          properties:
+            malt:
+              type: array
+              nullable: true
+              items:
+                type: object
+                nullable: true
+                properties:
+                  name:
+                    type: string
+                    nullable: true
+                  amount:
+                    properties:
+                      value:
+                        type: number
+                        nullable: true
+                      unit:
+                        type: string
+                        nullable: true
+                    type: object
+                    nullable: true
+            hops:
+              type: array
+              items:
+                type: object
+                nullable: true
+                properties:
+                  name:
+                    type: string
+                    nullable: true
+                  amount:
+                    properties:
+                      value:
+                        type: number
+                        nullable: true
+                      unit:
+                        type: string
+                        nullable: true
+                    type: object
+                    nullable: true
+                  add:
+                    type: string
+                    nullable: true
+                  attribute:
+                    type: string
+                    nullable: true
+            yeast:
+              type: string
+              nullable: true
+          type: object
+          nullable: true
+        food_pairing:
+          type: array
+          items:
+            type: string
+            nullable: true
+        brewers_tips:
+          type: string
+          nullable: true
+        contributed_by:
+          type: string
+          nullable: true
+      type: object
+    LocationArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    Forecast:
+      properties:
+        consolidated_weather:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: number
+              weather_state_name:
+                type: string
+              weather_state_abbr:
+                type: string
+              wind_direction_compass:
+                type: string
+              created:
+                type: string
+              applicable_date:
+                type: string
+              min_temp:
+                type: number
+              max_temp:
+                type: number
+              the_temp:
+                type: number
+              wind_speed:
+                type: number
+              wind_direction:
+                type: number
+              air_pressure:
+                type: number
+              humidity:
+                type: number
+              visibility:
+                type: number
+              predictability:
+                type: number
+        time:
+          type: string
+        sun_rise:
+          type: string
+        sun_set:
+          type: string
+        timezone_name:
+          type: string
+        parent:
+          properties:
+            title:
+              type: string
+            location_type:
+              type: string
+            woeid:
+              type: number
+            latt_long:
+              type: string
+          type: object
+        sources:
+          type: array
+          items:
+            type: object
+            properties:
+              title:
+                type: string
+              slug:
+                type: string
+              url:
+                type: string
+              crawl_rate:
+                type: number
+        title:
+          type: string
+        location_type:
+          type: string
+        woeid:
+          type: number
+        latt_long:
+          type: string
+        timezone:
+          type: string
+    ForecastArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/Forecast'
+    Location:
+      type: object
+      properties:
+        distance:
+          type: number
+          nullable: true
+        title:
+          type: string
+        location_type:
+          type: string
+        woeid:
+          type: number
+        latt_long:
+          type: string
+    ErrorWeather:
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string

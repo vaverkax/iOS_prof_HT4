@@ -1,11 +1,11 @@
 import XCTest
-@testable import BeerApiNetworkModule
+@testable import NetworkingModule
 
-final class BeerApiNetworkModuleTests: XCTestCase {
+final class NetworkingModuleTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(BeerApiNetworkModule().text, "Hello, World!")
+        XCTAssertEqual(NetworkingModule().text, "Hello, World!")
     }
 }
