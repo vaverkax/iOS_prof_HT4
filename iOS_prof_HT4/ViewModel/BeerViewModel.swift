@@ -18,7 +18,6 @@ class BeerViewModel: ObservableObject {
     var isFirstLoad: Bool = true
     
     private var page: Int = 1
-    private var maxTotal: Int = .max
     var cancellable = Set<AnyCancellable>()
     
     func setItemSelected(beer: Beer) {

@@ -16,6 +16,7 @@ public typealias OpenAPIClient = OpenAPIClientAPI
 open class OpenAPIClientAPI {
     public static var basePath = "https://api.punkapi.com/v2"
     public static var basePath2 = "https://www.metaweather.com/api"
+    public static var basePath3 = "https://www.metaweather.com/"
     public static var customHeaders: [String: String] = [:]
     public static var credential: URLCredential?
     public static var requestBuilderFactory: RequestBuilderFactory = URLSessionRequestBuilderFactory()

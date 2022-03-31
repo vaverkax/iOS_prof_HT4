@@ -9,8 +9,8 @@ import SwiftUI
 import NetworkingModule
 
 struct BeerListView: View {
-    @EnvironmentObject private var viewModel: BeerViewModel
-    @EnvironmentObject var navigationModel: NavigationControllerViewModel
+    @ObservedObject private var viewModel: BeerViewModel = DependencyProvider.getDependency()
+    @ObservedObject var navigationModel: NavigationControllerViewModel = DependencyProvider.getDependency()
     @State var isAnimationOn: Bool = false
     
     var body: some View {

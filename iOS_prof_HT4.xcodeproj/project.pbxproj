@@ -38,6 +38,10 @@
 		18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */; };
 		18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4627F4EF3100CA4A6B /* MapView.swift */; };
 		18C67E4927F4F51B00CA4A6B /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */; };
+		18C67E4E27F5CCA700CA4A6B /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */; };
+		18C67E5027F5F8DA00CA4A6B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */; };
+		18C67E5327F5FD5300CA4A6B /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5227F5FD5300CA4A6B /* Injected.swift */; };
+		18C67E5727F6121200CA4A6B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5627F6121200CA4A6B /* DependencyProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +79,10 @@
 		18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToCoordinates.swift"; sourceTree = "<group>"; };
 		18C67E4627F4EF3100CA4A6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
+		18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		18C67E5227F5FD5300CA4A6B /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		18C67E5627F6121200CA4A6B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,13 +120,13 @@
 		189079F327EA146900FEDF46 /* iOS_prof_HT4 */ = {
 			isa = PBXGroup;
 			children = (
+				18907A0F27EA230200FEDF46 /* Extensions */,
+				18C67E5127F5F8DE00CA4A6B /* DI */,
 				18C67E2F27F494D700CA4A6B /* View */,
 				18C67E1127EDDD5B00CA4A6B /* NavigationStack */,
-				18907A0F27EA230200FEDF46 /* Extensions */,
 				18907A0C27EA1CED00FEDF46 /* ViewModel */,
 				189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */,
 				18C67E3427F4B08300CA4A6B /* TabRouter.swift */,
-				18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */,
 				189079F827EA146B00FEDF46 /* Assets.xcassets */,
 				189079FA27EA146B00FEDF46 /* Preview Content */,
 			);
@@ -189,8 +197,20 @@
 				18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */,
 				18C67E4627F4EF3100CA4A6B /* MapView.swift */,
 				18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */,
+				18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18C67E5127F5F8DE00CA4A6B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */,
+				18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */,
+				18C67E5227F5FD5300CA4A6B /* Injected.swift */,
+				18C67E5627F6121200CA4A6B /* DependencyProvider.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +292,7 @@
 				18C67E3D27F4CDD200CA4A6B /* WeatherTabView.swift in Sources */,
 				18907A0E27EA1CFD00FEDF46 /* BeerViewModel.swift in Sources */,
 				18C67E2427F4846700CA4A6B /* NavigationControllerViewModel.swift in Sources */,
+				18C67E5027F5F8DA00CA4A6B /* ServiceLocator.swift in Sources */,
 				18C67E2027F4401F00CA4A6B /* BeerAPI+Future.swift in Sources */,
 				18C67E3527F4B08300CA4A6B /* TabRouter.swift in Sources */,
 				18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */,
@@ -288,11 +309,14 @@
 				18C67E2A27F4860D00CA4A6B /* DetailBeerView.swift in Sources */,
 				18907A1127EA231600FEDF46 /* Beer+Identifiable.swift in Sources */,
 				18C67E2C27F486B500CA4A6B /* View+AnyView.swift in Sources */,
+				18C67E5327F5FD5300CA4A6B /* Injected.swift in Sources */,
 				18C67E1A27F3294200CA4A6B /* Forecast+Identifiable.swift in Sources */,
 				18907A1327EA23A900FEDF46 /* Collection+LastElement.swift in Sources */,
 				18C67E3F27F4D8FE00CA4A6B /* WeatherViewModel.swift in Sources */,
 				18C67E4127F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift in Sources */,
 				18C67E1327EDE0E300CA4A6B /* Screen.swift in Sources */,
+				18C67E5727F6121200CA4A6B /* DependencyProvider.swift in Sources */,
+				18C67E4E27F5CCA700CA4A6B /* CircleImageView.swift in Sources */,
 				18C67E3327F4AE0800CA4A6B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

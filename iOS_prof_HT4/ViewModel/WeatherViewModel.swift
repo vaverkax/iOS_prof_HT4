@@ -61,6 +61,10 @@ class WeatherViewModel: ObservableObject {
 
     }
     
+    func getImagePath(weather: String) -> String {
+        return MetaWeatherAPI.getImagePath(weather: weather)
+    }
+    
     deinit {
         for cancellable in cancellable {
             cancellable.cancel()

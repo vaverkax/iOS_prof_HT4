@@ -12,7 +12,9 @@ struct DailyForecastView: View {
     
     var dailyForecast: ForecastConsolidatedWeather
     var parentForecast: Forecast
-    @EnvironmentObject var routeModel: NavigationControllerViewModel
+    
+    @ObservedObject private var viewModel: WeatherViewModel = DependencyProvider.getDependency()
+    @ObservedObject var routeModel: NavigationControllerViewModel = DependencyProvider.getDependency()
     
     var body: some View {
         VStack {
@@ -23,6 +25,20 @@ struct DailyForecastView: View {
                     .onTapGesture {
                         routeModel.push(screenView: FullScreenMapView(coordinate: coordinate.parseToCoordinates()).toAnyView())
                     }
+                if let abriv = dailyForecast.weatherStateAbbr {
+                    CircleImageView(image: AsyncImage(url: URL(string: viewModel.getImagePath(weather: abriv))) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .toAnyView()
+                    } placeholder: {
+                        ProgressView()
+                    })
+                        .offset(y: -130)
+                        .padding(.bottom, -130)
+                        .frame(width: 200, height: 200)
+                }
+                
                 VStack(alignment: .leading) {
                     Text(parentForecast.title ?? "City")
                         .font(.title)

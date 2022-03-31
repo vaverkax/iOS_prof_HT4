@@ -11,6 +11,34 @@ tags:
 - name: MetaWeather
   description: Weather forecast
 paths:
+  /static/img/weather/png/{weather}.png:
+    servers:
+        - url: https://www.metaweather.com/api
+    get:
+      tags:
+        - MetaWeather
+      summary: Load weather image
+      parameters:
+      - in: path
+        name: weather
+        description: Abbreviation of weathere icon
+        schema:
+          type: string
+        required: true
+      responses:
+        200:
+          description: success
+          content:
+            image/png:
+              schema:
+                  type: string
+                  format: binary
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorWeather'
   /location/{woeid}/:
     servers:
         - url: https://www.metaweather.com/api
