@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct iOS_prof_HT4App: App {
+    init() {
+        ConfigManager.shared.configDI()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @EnvironmentObject var router: TabRouter
+    @ObservedObject var router: TabRouter = DependencyProvider.getDependency() // не нашел как этот обьект заинжектить потому что тогда ругается на $router.tabSelection
     
     var body: some View {
         VStack {

@@ -106,4 +106,50 @@ open class MetaWeatherAPI {
 
         return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
     }
+
+    /**
+     Load weather image
+     
+     - parameter weather: (path) Abbreviation of weathere icon 
+     - parameter apiResponseQueue: The queue on which api response is dispatched.
+     - parameter completion: completion handler to receive the data and the error objects
+     */
+    @discardableResult
+    open class func staticImgWeatherPngWeatherPngGet(weather: String, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: URL?, _ error: Error?) -> Void)) -> RequestTask {
+        return staticImgWeatherPngWeatherPngGetWithRequestBuilder(weather: weather).execute(apiResponseQueue) { result in
+            switch result {
+            case let .success(response):
+                completion(response.body, nil)
+            case let .failure(error):
+                completion(nil, error)
+            }
+        }
+    }
+
+    /**
+     Load weather image
+     - GET /static/img/weather/png/{weather}.png
+     - parameter weather: (path) Abbreviation of weathere icon 
+     - returns: RequestBuilder<URL> 
+     */
+    open class func staticImgWeatherPngWeatherPngGetWithRequestBuilder(weather: String) -> RequestBuilder<URL> {
+        var localVariablePath = "/static/img/weather/png/{weather}.png"
+        let weatherPreEscape = "\(APIHelper.mapValueToPathItem(weather))"
+        let weatherPostEscape = weatherPreEscape.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
+        localVariablePath = localVariablePath.replacingOccurrences(of: "{weather}", with: weatherPostEscape, options: .literal, range: nil)
+        let localVariableURLString = OpenAPIClientAPI.basePath3 + localVariablePath
+        let localVariableParameters: [String: Any]? = nil
+
+        let localVariableUrlComponents = URLComponents(string: localVariableURLString)
+
+        let localVariableNillableHeaders: [String: Any?] = [
+            :
+        ]
+
+        let localVariableHeaderParameters = APIHelper.rejectNilHeaders(localVariableNillableHeaders)
+
+        let localVariableRequestBuilder: RequestBuilder<URL>.Type = OpenAPIClientAPI.requestBuilderFactory.getBuilder()
+
+        return localVariableRequestBuilder.init(method: "GET", URLString: (localVariableUrlComponents?.string ?? localVariableURLString), parameters: localVariableParameters, headers: localVariableHeaderParameters)
+    }
 }

@@ -8,16 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var beerViewModel = BeerViewModel()
-    @ObservedObject var weatherViewModel = WeatherViewModel()
     
     var body: some View {
         NavigationContainerView(transition: .custom(.slide), content: {
             MainTabView()
-                .environmentObject(ConfigManager.shared.router)
-                .environmentObject(beerViewModel)
-                .environmentObject(weatherViewModel)
-        }).environmentObject(ConfigManager.shared.navigationModel)
+        })
     }
 }
 

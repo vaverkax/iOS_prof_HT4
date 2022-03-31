@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailBeerView: View {
     var item: String
-    @EnvironmentObject var routeModel: NavigationControllerViewModel
+    @ObservedObject var routeModel: NavigationControllerViewModel = DependencyProvider.getDependency()
     
     var body: some View {
         VStack {

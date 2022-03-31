@@ -10,7 +10,7 @@ import MapKit
 
 struct FullScreenMapView: View {
     var coordinate: CLLocationCoordinate2D?
-    @EnvironmentObject var routeModel: NavigationControllerViewModel
+    @ObservedObject var routeModel: NavigationControllerViewModel = DependencyProvider.getDependency()
     
     var body: some View {
         VStack {
