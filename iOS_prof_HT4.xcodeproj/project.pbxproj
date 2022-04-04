@@ -38,6 +38,8 @@
 		18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */; };
 		18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4627F4EF3100CA4A6B /* MapView.swift */; };
 		18C67E4927F4F51B00CA4A6B /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */; };
+		18C67E5B27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */; };
+		18C67E5D27F9B0A200CA4A6B /* TextWithSpacerElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToCoordinates.swift"; sourceTree = "<group>"; };
 		18C67E4627F4EF3100CA4A6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
+		18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetatilDailyForecastView.swift; sourceTree = "<group>"; };
+		18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithSpacerElementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +191,10 @@
 				18C67E2127F4841700CA4A6B /* NavigationContainerView.swift */,
 				18C67E3C27F4CDD200CA4A6B /* WeatherTabView.swift */,
 				18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */,
+				18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */,
 				18C67E4627F4EF3100CA4A6B /* MapView.swift */,
 				18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */,
+				18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 				18C67E2427F4846700CA4A6B /* NavigationControllerViewModel.swift in Sources */,
 				18C67E2027F4401F00CA4A6B /* BeerAPI+Future.swift in Sources */,
 				18C67E3527F4B08300CA4A6B /* TabRouter.swift in Sources */,
+				18C67E5D27F9B0A200CA4A6B /* TextWithSpacerElementView.swift in Sources */,
 				18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */,
+				18C67E5B27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift in Sources */,
 				18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */,
 				18C67E2827F484A000CA4A6B /* NavigationType.swift in Sources */,
 				18C67E2E27F4889100CA4A6B /* BeerListView.swift in Sources */,
