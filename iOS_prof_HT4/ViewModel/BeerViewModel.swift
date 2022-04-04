@@ -9,7 +9,8 @@ import Foundation
 import NetworkingModule
 import Combine
 
-class BeerViewModel: ObservableObject {
+class BeerViewModel: BaseViewModel {
+    @Injected var logService: LogService
     @Published var list: [Beer] = []
     @Published var selectedItem: Int? = nil
     @Published var isRequestFailed = false
@@ -18,7 +19,6 @@ class BeerViewModel: ObservableObject {
     var isFirstLoad: Bool = true
     
     private var page: Int = 1
-    private var maxTotal: Int = .max
     var cancellable = Set<AnyCancellable>()
     
     func setItemSelected(beer: Beer) {
@@ -34,6 +34,7 @@ class BeerViewModel: ObservableObject {
     
     func fetchBeers() {
         guard canLoadMore else { return }
+        logService.log("Fetching beers", metaData: ["" : ""])
         
         canLoadMore = false
         fetching = true

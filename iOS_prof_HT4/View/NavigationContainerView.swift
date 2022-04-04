@@ -11,7 +11,7 @@ import SwiftUI
 struct NavigationContainerView<Content: View>: View {
     @EnvironmentObject var viewModel: NavigationControllerViewModel
     private let content: Content
-    private let animation: Animation = .easeOut(duration: 0.3)
+    private let animation: Animation = .easeInOut(duration: 0.3)
     private let transition: (push: AnyTransition, pop: AnyTransition)
     
     init(transition: Transition, @ViewBuilder content: @escaping ()-> Content) {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1881A1BF27FED43F0048D79A /* BeerItemCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881A1BE27FED43F0048D79A /* BeerItemCellView.swift */; };
+		1881A1C2280402C70048D79A /* LogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881A1C1280402C70048D79A /* LogService.swift */; };
 		189079F527EA146900FEDF46 /* iOS_prof_HT4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */; };
 		189079F727EA146900FEDF46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189079F627EA146900FEDF46 /* ContentView.swift */; };
 		189079F927EA146B00FEDF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189079F827EA146B00FEDF46 /* Assets.xcassets */; };
@@ -38,9 +40,18 @@
 		18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */; };
 		18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4627F4EF3100CA4A6B /* MapView.swift */; };
 		18C67E4927F4F51B00CA4A6B /* FullScreenMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */; };
+		18C67E4E27F5CCA700CA4A6B /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */; };
+		18C67E5027F5F8DA00CA4A6B /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */; };
+		18C67E5327F5FD5300CA4A6B /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5227F5FD5300CA4A6B /* Injected.swift */; };
+		18C67E5727F6121200CA4A6B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5627F6121200CA4A6B /* DependencyProvider.swift */; };
+		18C67E5927F624F000CA4A6B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5827F624F000CA4A6B /* BaseViewModel.swift */; };
+		18C67E5B27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */; };
+		18C67E5D27F9B0A200CA4A6B /* TextWithSpacerElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1881A1BE27FED43F0048D79A /* BeerItemCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerItemCellView.swift; sourceTree = "<group>"; };
+		1881A1C1280402C70048D79A /* LogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogService.swift; sourceTree = "<group>"; };
 		189079F127EA146900FEDF46 /* iOS_prof_HT4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_prof_HT4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_prof_HT4App.swift; sourceTree = "<group>"; };
 		189079F627EA146900FEDF46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +86,13 @@
 		18C67E4427F4ED7200CA4A6B /* String+ToCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ToCoordinates.swift"; sourceTree = "<group>"; };
 		18C67E4627F4EF3100CA4A6B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenMapView.swift; sourceTree = "<group>"; };
+		18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		18C67E5227F5FD5300CA4A6B /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		18C67E5627F6121200CA4A6B /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		18C67E5827F624F000CA4A6B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetatilDailyForecastView.swift; sourceTree = "<group>"; };
+		18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithSpacerElementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1881A1C0280402AD0048D79A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1881A1C1280402C70048D79A /* LogService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		189079E827EA146900FEDF46 = {
 			isa = PBXGroup;
 			children = (
@@ -112,13 +138,14 @@
 		189079F327EA146900FEDF46 /* iOS_prof_HT4 */ = {
 			isa = PBXGroup;
 			children = (
+				1881A1C0280402AD0048D79A /* Services */,
+				18907A0F27EA230200FEDF46 /* Extensions */,
+				18C67E5127F5F8DE00CA4A6B /* DI */,
 				18C67E2F27F494D700CA4A6B /* View */,
 				18C67E1127EDDD5B00CA4A6B /* NavigationStack */,
-				18907A0F27EA230200FEDF46 /* Extensions */,
 				18907A0C27EA1CED00FEDF46 /* ViewModel */,
 				189079F427EA146900FEDF46 /* iOS_prof_HT4App.swift */,
 				18C67E3427F4B08300CA4A6B /* TabRouter.swift */,
-				18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */,
 				189079F827EA146B00FEDF46 /* Assets.xcassets */,
 				189079FA27EA146B00FEDF46 /* Preview Content */,
 			);
@@ -145,6 +172,7 @@
 			children = (
 				18907A0D27EA1CFD00FEDF46 /* BeerViewModel.swift */,
 				18C67E3E27F4D8FE00CA4A6B /* WeatherViewModel.swift */,
+				18C67E5827F624F000CA4A6B /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,10 +215,25 @@
 				18C67E2127F4841700CA4A6B /* NavigationContainerView.swift */,
 				18C67E3C27F4CDD200CA4A6B /* WeatherTabView.swift */,
 				18C67E4227F4EB9E00CA4A6B /* DailyForecastView.swift */,
+				18C67E5A27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift */,
 				18C67E4627F4EF3100CA4A6B /* MapView.swift */,
 				18C67E4827F4F51B00CA4A6B /* FullScreenMapView.swift */,
+				18C67E5C27F9B0A200CA4A6B /* TextWithSpacerElementView.swift */,
+				18C67E4D27F5CCA700CA4A6B /* CircleImageView.swift */,
+				1881A1BE27FED43F0048D79A /* BeerItemCellView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18C67E5127F5F8DE00CA4A6B /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				18C67E3627F4B2C100CA4A6B /* ConfigManager.swift */,
+				18C67E4F27F5F8DA00CA4A6B /* ServiceLocator.swift */,
+				18C67E5227F5FD5300CA4A6B /* Injected.swift */,
+				18C67E5627F6121200CA4A6B /* DependencyProvider.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +315,12 @@
 				18C67E3D27F4CDD200CA4A6B /* WeatherTabView.swift in Sources */,
 				18907A0E27EA1CFD00FEDF46 /* BeerViewModel.swift in Sources */,
 				18C67E2427F4846700CA4A6B /* NavigationControllerViewModel.swift in Sources */,
+				18C67E5027F5F8DA00CA4A6B /* ServiceLocator.swift in Sources */,
 				18C67E2027F4401F00CA4A6B /* BeerAPI+Future.swift in Sources */,
 				18C67E3527F4B08300CA4A6B /* TabRouter.swift in Sources */,
+				18C67E5D27F9B0A200CA4A6B /* TextWithSpacerElementView.swift in Sources */,
 				18C67E4727F4EF3100CA4A6B /* MapView.swift in Sources */,
+				18C67E5B27F9AE3C00CA4A6B /* DetatilDailyForecastView.swift in Sources */,
 				18C67E4527F4ED7200CA4A6B /* String+ToCoordinates.swift in Sources */,
 				18C67E2827F484A000CA4A6B /* NavigationType.swift in Sources */,
 				18C67E2E27F4889100CA4A6B /* BeerListView.swift in Sources */,
@@ -286,13 +332,19 @@
 				189079F727EA146900FEDF46 /* ContentView.swift in Sources */,
 				189079F527EA146900FEDF46 /* iOS_prof_HT4App.swift in Sources */,
 				18C67E2A27F4860D00CA4A6B /* DetailBeerView.swift in Sources */,
+				1881A1C2280402C70048D79A /* LogService.swift in Sources */,
 				18907A1127EA231600FEDF46 /* Beer+Identifiable.swift in Sources */,
 				18C67E2C27F486B500CA4A6B /* View+AnyView.swift in Sources */,
+				18C67E5927F624F000CA4A6B /* BaseViewModel.swift in Sources */,
+				18C67E5327F5FD5300CA4A6B /* Injected.swift in Sources */,
 				18C67E1A27F3294200CA4A6B /* Forecast+Identifiable.swift in Sources */,
 				18907A1327EA23A900FEDF46 /* Collection+LastElement.swift in Sources */,
+				1881A1BF27FED43F0048D79A /* BeerItemCellView.swift in Sources */,
 				18C67E3F27F4D8FE00CA4A6B /* WeatherViewModel.swift in Sources */,
 				18C67E4127F4DA9100CA4A6B /* MetaWeatherAPI+Future.swift in Sources */,
 				18C67E1327EDE0E300CA4A6B /* Screen.swift in Sources */,
+				18C67E5727F6121200CA4A6B /* DependencyProvider.swift in Sources */,
+				18C67E4E27F5CCA700CA4A6B /* CircleImageView.swift in Sources */,
 				18C67E3327F4AE0800CA4A6B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

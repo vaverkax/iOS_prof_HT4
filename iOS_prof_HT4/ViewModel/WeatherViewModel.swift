@@ -9,12 +9,13 @@ import Foundation
 import NetworkingModule
 import Combine
 
-class WeatherViewModel: ObservableObject {
+class WeatherViewModel: BaseViewModel {
     @Published var forecast: Forecast? = nil
     @Published var listLocation: [Location] = []
     @Published var woed: Int = 2122265
     @Published var fetching = false
     @Published var isRequestFailed = false
+
     var isFirstLoad: Bool = true
     
     var cancellable = Set<AnyCancellable>()
@@ -61,6 +62,10 @@ class WeatherViewModel: ObservableObject {
             }
             .store(in: &self.cancellable)
 
+    }
+    
+    func getImagePath(weather: String) -> String {
+        return MetaWeatherAPI.getImagePath(weather: weather)
     }
     
     deinit {

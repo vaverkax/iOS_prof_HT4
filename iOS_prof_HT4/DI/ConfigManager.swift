@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import NetworkingModule
 
 class ConfigManager {
     static let shared = ConfigManager()
@@ -18,4 +19,8 @@ class ConfigManager {
     lazy var navigationModel: NavigationControllerViewModel = {
         return NavigationControllerViewModel()
     }()
+    
+    func configDI() {
+        ServiceLocator.shared.addService(service: LogService())
+    }
 }

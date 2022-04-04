@@ -17,7 +17,7 @@ struct BeerListView: View {
         List {
             ForEach(viewModel.list, id: \.id) { beer in
                 let isLastCharacter = viewModel.list.isLastItem(beer)
-                Text(beer.name ?? " empty name")
+                BeerItemCellView(beer: beer)
                     .onTapGesture {
                         isAnimationOn.toggle()
                         self.onLabelTapped(beer: beer)
@@ -33,8 +33,8 @@ struct BeerListView: View {
             }
             if !(viewModel.isFirstLoad) {
                 LoaderView(isFailed: viewModel.isRequestFailed)
-                                .onAppear(perform: viewModel.fetchBeers)
-                                .onTapGesture(perform: onTapLoadView)
+                    .onAppear(perform: viewModel.fetchBeers)
+                    .onTapGesture(perform: onTapLoadView)
             }
         }
         .onAppear {
@@ -60,11 +60,11 @@ struct BeerListView: View {
     }
     
     private func onTapLoadView() {
-            if viewModel.isRequestFailed {
-                viewModel.isRequestFailed = false
-                viewModel.fetchBeers()
-            }
+        if viewModel.isRequestFailed {
+            viewModel.isRequestFailed = false
+            viewModel.fetchBeers()
         }
+    }
 }
 
 struct BeerListView_Previews: PreviewProvider {

@@ -37,4 +37,8 @@ extension MetaWeatherAPI {
             }
         }
     }
+    
+    open class func getImagePath(weather: String) -> String {
+        return OpenAPIClientAPI.basePath3 + "/static/img/weather/png/\(weather).png"
+    }
 }
